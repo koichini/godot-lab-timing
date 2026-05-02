@@ -1,0 +1,17 @@
+# Godot cache
+.godot/
+
+# Export
+*.import
+export.cfg
+export_presets.cfg
+
+# Builds
+*.exe
+*.pck
+*.zip
+builds/
+
+# OS
+.DS_Store
+Thumbs.db
