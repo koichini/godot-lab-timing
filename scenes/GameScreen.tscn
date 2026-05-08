@@ -24,72 +24,79 @@ horizontal_alignment = 1
 [node name="GameUI" type="Control" parent="UI" unique_id=1007539682]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="CountLabel" type="Label" parent="UI/GameUI" unique_id=2057452807]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 40.0
+offset_right = 676.0
+offset_bottom = 70.0
+horizontal_alignment = 1
 
 [node name="ZoneGood" type="ColorRect" parent="UI/GameUI" unique_id=347733956]
 layout_mode = 0
-offset_left = 320.0
-offset_top = 280.0
-offset_right = 560.0
-offset_bottom = 320.0
+offset_left = 456.0
+offset_top = 300.0
+offset_right = 696.0
+offset_bottom = 340.0
 color = Color(1, 1, 0, 0.3)
 
 [node name="ZonePerfect" type="ColorRect" parent="UI/GameUI" unique_id=172864560]
 layout_mode = 0
-offset_left = 380.0
-offset_top = 280.0
-offset_right = 500.0
-offset_bottom = 320.0
+offset_left = 516.0
+offset_top = 300.0
+offset_right = 636.0
+offset_bottom = 340.0
 color = Color(0, 1, 0, 0.4)
 
 [node name="Bar" type="ProgressBar" parent="UI/GameUI" unique_id=1943631966]
 layout_mode = 0
-offset_left = 140.0
-offset_top = 280.0
-offset_right = 740.0
-offset_bottom = 320.0
+offset_left = 276.0
+offset_top = 300.0
+offset_right = 876.0
+offset_bottom = 340.0
 max_value = 600.0
 value = 300.0
 show_percentage = false
 
 [node name="Marker" type="ColorRect" parent="UI/GameUI" unique_id=142175555]
 layout_mode = 0
-offset_left = 140.0
-offset_top = 280.0
-offset_right = 148.0
-offset_bottom = 320.0
+offset_left = 572.0
+offset_top = 300.0
+offset_right = 580.0
+offset_bottom = 340.0
 
 [node name="JudgeLabel" type="Label" parent="UI/GameUI" unique_id=1655840286]
 layout_mode = 0
-offset_left = 140.0
-offset_top = 330.0
-offset_right = 740.0
-offset_bottom = 390.0
+offset_left = 276.0
+offset_top = 350.0
+offset_right = 876.0
+offset_bottom = 410.0
 horizontal_alignment = 1
 
-[node name="CountLabel" type="Label" parent="UI/GameUI" unique_id=2057452807]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-
 [node name="ResultUI" type="Control" parent="UI" unique_id=1104824655]
+visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1152.0
+offset_bottom = 648.0
 
 [node name="ScoreLabel" type="Label" parent="UI/ResultUI" unique_id=350147996]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 376.0
+offset_top = 280.0
+offset_right = 776.0
+offset_bottom = 340.0
+horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="UI/ResultUI" unique_id=2138963337]
 layout_mode = 0
-offset_left = 400.0
-offset_top = 350.0
-offset_right = 494.0
-offset_bottom = 381.0
+offset_left = 516.0
+offset_top = 370.0
+offset_right = 636.0
+offset_bottom = 410.0
 text = "Go To Back"
 
 [connection signal="pressed" from="UI/ResultUI/BackButton" to="." method="_on_back_button_pressed"]
