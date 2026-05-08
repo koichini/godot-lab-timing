@@ -7,6 +7,10 @@ const PERFECT_RANGE := 60.0
 const GOOD_RANGE := 120.0
 const MAX_TRIES := 3
 
+const SE_GREAT: AudioStream = preload("res://assets/audio/great.wav")
+const SE_GOOD: AudioStream = preload("res://assets/audio/good.wav")
+const SE_BAD: AudioStream = preload("res://assets/audio/bad.wav")
+
 var _pos := 300.0
 var _direction := 1.0
 var _tries_left := MAX_TRIES
@@ -51,13 +55,16 @@ func _judge() -> void:
 		_judge_label.text = "PERFECT!"
 		_judge_label.modulate = Color.GREEN
 		points = 100
+		AudioManager.play_se(SE_GREAT)
 	elif dist <= GOOD_RANGE:
 		_judge_label.text = "GOOD"
 		_judge_label.modulate = Color.YELLOW
 		points = 50
+		AudioManager.play_se(SE_GOOD)
 	else:
 		_judge_label.text = "MISS..."
 		_judge_label.modulate = Color.RED
+		AudioManager.play_se(SE_BAD)
 
 	GameState.score += points
 	_tries_left -= 1
